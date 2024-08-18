@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         checkNoTasks();
     }
 
-    addTaskButton.addEventListener('click', function () {
+    function addTask() {
         const taskText = newTaskInput.value.trim();
         if (taskText !== '') {
             const listItem = document.createElement('li');
@@ -88,6 +88,14 @@ document.addEventListener('DOMContentLoaded', function () {
             checkNoTasks();
             saveTasks();
             newTaskInput.value = '';
+        }
+    }
+
+    addTaskButton.addEventListener('click', addTask);
+
+    newTaskInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            addTask();
         }
     });
 
