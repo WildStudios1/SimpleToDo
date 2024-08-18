@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/x-icon" href="https://img.icons8.com/dusk/64/list--v1.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple To-Do</h1>
+
+        <div class="task-input">
+            <input type="text" id="new-task" placeholder="Enter a new task...">
+            <button id="add-task">Add Task</button>
+        </div>
+
+        <div class="task-counter">
+            <span id="current-tasks-count">0</span> Current Tasks |
+            <span id="completed-tasks-count">0</span> Completed Tasks
+        </div>
+
+        <div class="task-list-container">
+            <ul id="task-list" class="task-list"></ul>
+            <p id="no-tasks" class="no-tasks">No current tasks.</p>
+        </div>
+    </div>
+
+    <footer>
+	<button id="toggle-mode" class="toggle-mode">
+            <span id="theme-icon">☀️</span>
+        </button>
+        <p>&copy; BRAVOSIERRA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
